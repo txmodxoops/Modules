@@ -1,0 +1,24 @@
+<{include file="db:meteoit_header.html"}>
+<div class="row">
+  <div class="span8">
+     <{$smarty.const._MA_METEOIT_WEATHER_FLASH}>
+  </div>
+</div>
+<div id="container">
+  <div class="f_wrapper">
+    <div class="f_iframe">
+        <!-- a transparent image is preferable -->
+        <img class="ratio" src="<{xoImgUrl img/bgtransp.gif}>"/>
+         <!-- Inizio codice ilMeteo.it -->
+         <iframe src="http://www.ilmeteo.it/flash/meteo-free.html" frameborder="0" allowfullscreen></iframe>
+         <!-- Fine codice ilMeteo.it -->
+    </div>    
+  </div>
+  <hr />
+  <div class="row">
+     <div class="span8">
+       <p><{$smarty.const._MA_METEOIT_FLASH_DESC}></p>
+     </div>
+  </div>
+</div>
+<{include file="db:meteoit_footer.html"}>

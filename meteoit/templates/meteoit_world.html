@@ -1,0 +1,31 @@
+<{include file="db:meteoit_header.html"}>
+<div class="row">
+  <div class="span8">
+    <{$smarty.const._MA_METEOIT_WEATHER_EARTH}>
+  </div>
+</div>
+<div class="container-fluid">
+  <ul class="nav nav-tabs">
+    <li><a href="<{$url1}>"><{$smarty.const._MA_METEOIT_EST}></a></li>
+    <li><a href="<{$url2}>"><{$smarty.const._MA_METEOIT_WEST}></a></li>
+  </ul>
+  <div style="clear:both;"></div>
+  <div class="row">
+   <div class="span5">
+    <img src='http://maps.weather.com/images/sat/<{$page.image}>_720x486.jpg' alt="<{$page.image}>" width='<{$page.width}>' height='<{$page.height}>' />
+   </div>   
+   <{if $ads120x240 != ''}>
+   <div class="span1">
+      <{$ads120x240}>
+  </div>
+  <{/if}>
+ </div>
+ <div style="clear:both;"></div>
+  <hr />
+  <div class="row">
+     <div class="span8">
+       <p><{$smarty.const._MA_METEOIT_WORLD_DESC}></p>
+     </div>
+  </div>
+</div>
+<{include file="db:meteoit_footer.html"}>

@@ -1,0 +1,45 @@
+<{include file="db:meteoit_header.html"}>
+<div class="row">
+  <div class="span8">
+    <{$smarty.const._MA_METEOIT_WEATHER_VIDEOS}>
+  </div>
+</div>
+<div class="container-fluid">
+  <ul class="nav nav-tabs">
+    <li><a href="<{$url1}>"><{$smarty.const._MA_METEOIT_TODAY}></a></li>
+    <li><a href="<{$url2}>"><{$smarty.const._MA_METEOIT_TOMORROW}></a></li>
+  </ul>
+  <div style="clear:both;"></div>
+  <div class="row">
+    <div class="span8">    
+	 <iframe width="<{$page.width}>" height="<{$page.height}>" src="http://www.ilmeteo.it/videom/embed_<{$page.video}>_autoplay" frameborder="0" mozallowfullscreen="true" webkitallowfullscreen="true" allowfullscreen="true"></iframe>
+    </div>   
+  </div>
+  <{if !$xoops_isadmin}>
+  <div style="clear:both;"></div>
+  <div class="row">
+	<div class="span8">      
+        <div class="center">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Reactive Responsive -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3352884075259517"
+     data-ad-slot="4639833317"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+	</div>
+  </div>
+  <{/if}>
+  <div style="clear:both;"></div>
+  <hr />
+    <div class="row">
+       <div class="span8">
+         <p><{$smarty.const._MA_METEOIT_VIDEOS_DESC}></p>
+       </div>
+    </div>
+</div>
+<{include file="db:meteoit_footer.html"}>

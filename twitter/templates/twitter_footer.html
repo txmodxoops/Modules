@@ -1,0 +1,10 @@
+<div class="left"><{$copyright}></div>
+<{if $act_social != 0}>
+<div class="center"><{$social}></div><{include file="db:system_barsocials.html"}>
+<{/if}>
+<{if $adv != '' && !$xoops_isadmin}>
+<div class="center"><{$adv}></div>
+<{/if}>
+<{if $xoops_isadmin}>
+   <div class="text-center bold"><{$admin}></div>
+<{/if}>

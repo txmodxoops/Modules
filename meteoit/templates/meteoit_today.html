@@ -1,0 +1,30 @@
+<{include file="db:meteoit_header.html"}>
+<div class="row">
+  <div class="span8">
+   <{$smarty.const._MA_METEOIT_WEATHER_TODAY}>
+  </div>
+</div>
+<div class="container-fluid">
+    <ul class="nav nav-tabs">
+      <li><a href="<{$url1}>"><{$smarty.const._MA_METEOIT_TOPOGRAPHIC}></a></li>
+      <li><a href="<{$url2}>"><{$smarty.const._MA_METEOIT_RAINFALL}></a></li>
+    </ul>
+    <div style="clear:both;"></div>
+    <div class="row">
+      <div class="span4" id="image">
+        <img src='http://www.ilmeteo.it/<{$page.image}>.gif' width='<{$page.width}>' height='<{$page.height}>' />
+      </div>
+      <{if $ads300x250 != ''}>
+       <div class="span3">
+        <{$ads300x250}>
+       </div>
+      <{/if}>
+    </div>
+    <hr />
+    <div class="row">
+       <div class="span8">
+         <p><{$smarty.const._MA_METEOIT_TODAY_DESC}></p>
+       </div>
+    </div>
+</div>
+<{include file="db:meteoit_footer.html"}>

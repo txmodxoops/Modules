@@ -1,0 +1,34 @@
+<{include file="db:meteoit_header.html"}>
+<div class="row">
+  <div class="span8">
+     <{$smarty.const._MA_METEOIT_WEATHER_ITALY}>
+  </div>
+</div>
+<div class="container-fluid">
+    <ul class="nav nav-tabs">
+       <li><a href="<{$url1}>"><{$smarty.const._MA_METEOIT_ONEDAY}></a></li>
+       <li><a href="<{$url2}>"><{$smarty.const._MA_METEOIT_TWODAY}></a></li>
+       <li><a href="<{$url3}>"><{$smarty.const._MA_METEOIT_THREEDAY}></a></li>
+       <li><a href="<{$url4}>"><{$smarty.const._MA_METEOIT_FOURDAY}></a></li>
+       <li><a href="<{$url5}>"><{$smarty.const._MA_METEOIT_FIVEDAY}></a></li>
+       <li><a href="<{$url6}>"><{$smarty.const._MA_METEOIT_SIXDAY}></a></li>
+    </ul>
+    <div style="clear:both;"></div>
+    <div class="row">
+      <div class="span4">
+        <img src='http://www.ilmeteo.it/italy<{$page.image}>.gif' width='<{$page.width}>' height='<{$page.height}>' alt="<{$smarty.const._MA_METEOIT_WEATHER_ITALY}>" />
+      </div>
+    <{if $ads300x250 != ''}>
+     <div class="span3">
+      <{$ads300x250}>
+     </div>
+    <{/if}> 
+    </div>
+    <hr />
+    <div class="row">
+       <div class="span6">
+         <p><{$page.description}></p>
+       </div>
+    </div>
+</div>
+<{include file="db:meteoit_footer.html"}>

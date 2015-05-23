@@ -1,0 +1,47 @@
+/* 
+ *  Module Twitter
+ *  Created Tru 05/03/2012
+ *  Copyright TXMod Xoops <info@txmodxoops.org>
+ *  $Id Timgno
+ */
+table {
+   border: 1px solid #ccc;
+   width: 100%;
+}
+
+tr.even{
+   background-color: #C8C8C8;
+}
+
+tr.odd {
+   background-color: #E2E2E2;
+}
+
+th.title  {
+   float: left;
+   margin-left: 3px;
+   height: 15px;
+   background: transparent;
+}
+
+th.title span {
+   margin-left: 30px;
+   text-align: left;
+   background: transparent;
+}
+
+td a {
+  margin: 0px;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+}
+
+td.user a {
+  border-bottom: 1px solid #ccc;
+  margin: 1px;
+  width: 90px;
+  height: 10px;
+  color: #0000ff;
+  background: transparent;
+}

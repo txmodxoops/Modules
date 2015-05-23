@@ -1,0 +1,66 @@
+<{include file="db:meteoit_header.html"}>
+<div class="row">
+  <div class="span8">
+    <{$smarty.const._MA_METEOIT_WEATHER_REGIONAL}>
+  </div>
+</div>
+<div id="container-fluid">
+   <div class="row">  
+     <div class="span8">
+       <form name="confForm" action="<{$meteoit_url}>/regional.php" method="get">
+	   <div style="padding-bottom:10px;">
+		<b><{$smarty.const._MA_METEOIT_WEATHER_REGIONAL_SELECT}></b><br />
+		<label class="select">
+			<span>Regione:</span>
+			<select name="rid" id="rid">
+				<option value="ABR">Abruzzo</option>
+                                <option value="BAS">Basilicata</option>
+                                <option value="CAL">Calabria</option>
+                                <option value="CAM">Campania</option>
+                                <option value="EMR">Emilia Romagna</option>
+                                <option value="FRI">Friuli Venezia Giulia</option>
+                                <option value="LAZ">Lazio</option>
+                                <option value="LIG">Liguria</option>
+                                <option value="LOM">Lombardia</option>
+                                <option value="MAR">Marche</option>
+                                <option value="MOL">Molise</option>
+                                <option value="PIE">Piemonte</option>
+                                <option value="PUG">Puglia</option>
+                                <option value="SAR">Sardegna</option>
+                                <option value="SIC">Sicilia</option>
+                                <option value="TOS">Toscana</option>
+                                <option value="TRE">Trentino Alto Adige</option>
+                                <option value="UMB">Umbria</option>
+                                <option value="VAL">Valle d'Aosta</option>
+                                <option value="VEN">Veneto</option>
+			</select>
+		</label>
+	    </div>
+         </form>    
+      </div>  
+    </div>
+    <div style="clear:both;"></div>
+    <!-- Inizio codice ilMeteo.it
+    <a href="http://www.ilmeteo.it/Abruzzo" title="Meteo Abruzzo" target="_blank">
+       <img src="http://www.ilmeteo.it/cartine3/0.<{$rvalue}>.png" alt="Meteo Abruzzo" border="0" />
+    </a>    -->
+    <!-- Fine codice ilMeteo.it -->
+    <div class="row">
+      <div class="span4" id="imagePreview">
+        <img src="http://www.ilmeteo.it/cartine3/0.ABR.png" alt="Meteo Abruzzo" />
+      </div>
+      <{if $ads300x250 != ''}>
+       <div class="span3">
+        <{$ads300x250}>
+       </div>
+      <{/if}>
+    </div>
+    <div style="clear:both;"></div>
+    <hr />
+    <div class="row">
+       <div class="span8">
+         <p><{$smarty.const._MA_METEOIT_REGIONAL_DESC}></p>
+       </div>
+    </div>
+</div>
+<{include file="db:meteoit_footer.html"}>

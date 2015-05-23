@@ -1,0 +1,20 @@
+<{include file="db:twitter_header.html"}>
+<form action="<{$xoops_url}>/modules/twitter/index.php" method="post">
+    <p>
+      <label for="query">Query: </label><input type="text" id="query" name="query" value="txmodxoops" /> &nbsp; &nbsp;
+        <input type="submit" value="send" />
+    </p>
+</form>
+<section>
+   <table class='table table-bordered width100'>
+        <thead><tr><th class="span1"><{$users_title}></th><th class="span5"><{$tweets_title}></th></tr></thead>
+         <tbody>                                                  <!-- txmodxoops -->
+         <tr>
+           <td class="span6" colspan="2"><a class="twitter-timeline" href="https://twitter.com/<{$username}>" data-widget-id="365952017564315650">Tweets di @txmodxoops</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+           </td>
+        </tr>
+        </tbody>
+   </table>
+</section>
+<{include file="db:twitter_footer.html"}>

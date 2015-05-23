@@ -1,0 +1,53 @@
+<{include file="db:meteoit_header.html"}>
+<div class="container-fluid">
+    <ul class="nav nav-tabs">
+      <li><a href="<{$url1}>"><{$smarty.const._MA_METEOIT_WEEK}></a></li>
+      <li><a href="<{$url2}>"><{$smarty.const._MA_METEOIT_ANIMATED}></a></li>
+      <li><a href="<{$url3}>"><{$smarty.const._MA_METEOIT_TIMEBANDS}></a></li>
+      <li><a href="<{$url4}>"><{$smarty.const._MA_METEOIT_THREEHOURS}></a></li>
+      <li><a href="<{$url5}>"><{$smarty.const._MA_METEOIT_WINDSANDSEAS}></a></li>
+      <li><a href="<{$url6}>"><{$smarty.const._MA_METEOIT_WEATHERDAY}></a></li>
+    </ul>
+    <div class="clear"></div>
+    <div class="row">
+     <div class="span5">
+       <{if $page.image == 1}>
+        <!-- Inizio codice ilMeteo.it -->
+        <iframe width='<{$page.width}>' height='<{$page.height}>' scrolling="no" frameborder="no" noresize="noresize" src="http://www.ilmeteo.it/box/previsioni.php?citta=5913&type=day1&width=<{$page.width}>&ico=2&lang=ita&days=6&font=Verdana&fontsize=12&bg=FFFFFF&fg=000000&bgtitle=0099FF&fgtitle=FFFFFF&bgtab=F0F0F0&fglink=1773C2"></iframe>
+        <!-- Fine codice ilMeteo.it -->
+       <{elseif $page.image == 2}>
+        <!-- Inizio codice ilMeteo.it -->
+        <iframe width='<{$page.width}>' height='<{$page.height}>' frameborder="no" noresize="noresize" src="http://www.ilmeteo.it/box/previsioni.php?citta=5913&type=day2&width=<{$page.width}>&ico=swf1&lang=ita&days=5&font=Arial&fontsize=12&bg=FFFFFF&fg=000000&bgtitle=0099FF&fgtitle=FFFFFF&bgtab=F0F0F0&fglink=1773C2"></iframe>
+        <!-- Fine codice ilMeteo.it -->
+       <{elseif $page.image == 3}>
+        <!-- Inizio codice ilMeteo.it -->
+        <iframe width='<{$page.width}>' height='<{$page.height}>' scrolling="no" frameborder="no" noresize="noresize" src="http://www.ilmeteo.it/box/previsioni.php?citta=5913&type=mps1&width=<{$page.width}>&ico=5&lang=ita&days=3&font=Arial&fontsize=12&bg=FFFFFF&fg=000000&bgtitle=0099FF&fgtitle=FFFFFF&bgtab=F0F0F0&fglink=1773C2"></iframe>
+        <!-- Fine codice ilMeteo.it -->
+       <{elseif $page.image == 4}>
+        <!-- Inizio codice ilMeteo.it -->
+        <iframe width='<{$page.width}>' height='<{$page.height}>' scrolling="no" frameborder="no" noresize="noresize" src="http://www.ilmeteo.it/box/previsioni.php?citta=5913&type=tri1&width=<{$page.width}>&ico=5&lang=ita&days=6&font=Arial&fontsize=12&bg=FFFFFF&fg=000000&bgtitle=0099FF&fgtitle=FFFFFF&bgtab=F0F0F0&fglink=1773C2"></iframe>
+        <!-- Fine codice ilMeteo.it -->
+       <{elseif $page.image == 5}>
+        <!-- Inizio codice ilMeteo.it -->
+        <iframe width='<{$page.width}>' height='<{$page.height}>' scrolling="no" frameborder="no" noresize="noresize" src="http://www.ilmeteo.it/box/previsioni.php?citta=3088&type=sea1&width=<{$page.width}>&ico=1&lang=ita&days=5&font=Arial&fontsize=12&bg=FFFFFF&fg=000000&bgtitle=0099FF&fgtitle=FFFFFF&bgtab=F0F0F0&fglink=1773C2"></iframe>
+        <!-- Fine codice ilMeteo.it -->
+       <{elseif $page.image == 6}>
+        <!-- Inizio codice ilMeteo.it -->
+        <iframe width='<{$page.width}>' height='<{$page.height}>' scrolling="no" frameborder="no" noresize="noresize" src="http://www.ilmeteo.it/box/previsioni.php?citta=3088&type=real1&width=400&ico=1&lang=ita&days=6&font=Arial&fontsize=12&bg=FFFFFF&fg=000000&bgtitle=0099FF&fgtitle=FFFFFF&bgtab=F0F0F0&fglink=1773C2"></iframe>
+        <!-- Fine codice ilMeteo.it -->
+       <{/if}>
+     </div>
+     <{if $ads120x240 != ''}>
+     <div class="span1">
+        <{$ads120x240}>
+     </div>
+     <{/if}>
+    </div>
+    <hr />
+    <div class="row">
+       <div class="span8">
+         <p><{$page.description}></p>
+       </div>
+    </div>
+</div>
+<{include file="db:meteoit_footer.html"}>

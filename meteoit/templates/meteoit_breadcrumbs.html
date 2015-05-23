@@ -1,0 +1,13 @@
+<ul id="breadcrumb" class="ui-corner-all" style="background-image:url('<{xoAdminNav bc_bg.png}>'); ">
+    <li><a href="<{$meteoit_url}>" title="Home"><img class="home" src="<{xoModuleIcons16 home.png}>" alt="Home" /></a></li>
+    <{foreach item=itm from=$xoBreadcrumbs name=bcloop}>
+        <{if $itm.link}>
+            <li><a href="<{$itm.link}>" title="<{$itm.title}>" style="background-image:url('<{xoAdminNav bc_separator.png}>');"><{$itm.title}></a>
+        <{else}>
+            <li><{$itm.title}></li>
+        <{/if}>
+        <{if !$smarty.foreach.bcloop.last}>
+            <span class="divider">&raquo;</span></li>
+        <{/if}>
+    <{/foreach}>
+</ul>

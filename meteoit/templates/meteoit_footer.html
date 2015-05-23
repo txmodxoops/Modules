@@ -1,0 +1,13 @@
+<{if $bookmarks}>
+<hr />
+<{includeq file="db:system_barsocials.html"}>
+<{/if}>
+<{if $fbcomments}>
+<{includeq file="db:system_fbcomments.html"}>
+<{/if}>
+<div class="justify">
+<span class="span2"><{$copyright}></span>
+<{if $xoops_isadmin}>
+   <span class="span5 center bold"><a href="<{$admin}>"><{$smarty.const._MA_METEOIT_ADMIN}></a></span>
+<{/if}>
+</div>

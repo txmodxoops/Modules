@@ -1,0 +1,40 @@
+<{include file="db:partads_header.html"}>
+<div id="partners">
+<{if count($partads) gt 0}>
+<table class="table table-striped width100">
+  <thead><tr><th colspan="<{$divideby}>"><{$lang_title}></th></tr></thead>
+  <tbody>
+  <tr>
+  <!-- Start modules loop -->
+ <{foreach item=part from=$partads }>
+     <td>
+      <table class="table table-striped width100">
+        <tbody>
+        <tr class="<{cycle values='even,odd'}>">
+          <td width="1%">
+               <a href="visit.php?pards_id=<{$part.id}>" title="<{$smarty.const._MD_PARTADS_VISITNOW}>" rel="external">
+                  <img src="<{$part.image}>" alt="<{$smarty.const._MD_PARTADS_VISITNOW}>" /></a>
+          </td>
+          <td width="98%" class="textdesc">
+               <b><{$part.title}></b><br /><{$part.desc}>
+          </td>
+          <{if $xoops_isadmin}>
+            <td width="1%" valign="middle">
+               <b><{$part.hits}></b>
+            </td>
+          <{/if}>
+        </tr>
+        </tbody>
+      </table>
+     </td>
+   <{if $part.count is div by $divideby}>
+     </tr><tr>
+   <{/if}>
+ <{/foreach}>
+ <!-- End modules loop -->   
+ </tr>
+ </tbody>
+</table>
+<{/if}> 
+</div>
+<{include file="db:partads_footer.html"}>
